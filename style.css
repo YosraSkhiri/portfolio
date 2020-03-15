@@ -101,3 +101,48 @@ nav{
 .nav-link + .nav-link{ border-left: 1px solid rgba(0, 0, 0, 0.2); }
 
 .hamburger{ display: none; }
+
+@media screen and (max-width: 768px) {
+    .hamburger{ 
+        display: block; 
+        cursor: pointer;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: white;
+        font-size: 1.7rem;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: rgba(144, 219, 224, 0.747);
+        transform: translateX(100%);
+    }
+
+    .nav-links-show{
+        display: flex;
+        transform: translateX(0%);
+    }
+    
+    .nav-link + .nav-link{ border-left: none; }
+
+    .nav-link{ 
+        padding: 0;
+        position: relative;
+        margin-right: 2em;
+    }
+
+    .nav-link > a{
+        display: block;
+        width: 100%;
+        padding: 1em 3em;
+    }
+
+    .nav-link::before{
+        display: none;
+    }
+}
