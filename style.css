@@ -38,21 +38,21 @@ body{
 }
 
 html {
-    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    /*font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));*/
 }
 
 nav{
     display: flex;
     padding: 1em 3.5em;
     justify-content: space-between;
-    font-size: .7rem;
+    font-size: 1rem;
 }
 
 .logo{
     position: relative;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 0.4em;
 }
 
 .logo > span:nth-child(1){
@@ -67,9 +67,9 @@ nav{
     content: '';
     position: absolute;
     top: 50%;
-    left: -60%;
+    left: -55%;
     display: block;
-    width: 2.8rem;
+    width: 3.5rem;
     height: 2px;
     background-color: var(--light-text-color);
     cursor: auto;
@@ -83,21 +83,21 @@ nav{
 }
 
 .nav-link{ 
-    padding: 0 2em;
-    position: relative;
+    padding: 0 2.3em;
 }
 
 .nav-link > a{
     display: block;
-    width: 70px;
+    width: 4.4em;
     text-align: center;
 }
 
 .nav-link > a > span{
     display: block;
-    text-align: left;
+    text-align: center;
     width: fit-content;
     margin: auto;
+    position: relative;
 }
 
 .nav-link > a > span::before{
@@ -108,12 +108,28 @@ nav{
     height: 7px;
     position: absolute;
     z-index: -1;
-    bottom: 5px;
-    transition: width .3s ease-in-out;
+    top: 10px;
+    transition: width .5s ease-in-out;
 }
 
 .nav-link > a:hover > span::before{
-    width: 75px;
+    width: 130%;
+}
+
+.nav-link > a > span::after{
+    content: '';
+    display: block;
+    background-color: var(--light-secondary-color);
+    width: 0%;
+    height: 7px;
+    position: absolute;
+    z-index: -2;
+    top: 10px;
+    transition: width .3s ease-in-out;
+}
+
+.nav-link > a:hover > span::after{
+    width: 130%;
 }
 
 .nav-link + .nav-link{ border-left: 1px solid rgba(0, 0, 0, 0.2); }
