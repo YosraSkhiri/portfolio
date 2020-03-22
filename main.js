@@ -1,20 +1,28 @@
 let hamburger = document.querySelector('#hamburger');
 let menu = document.querySelector('.nav-links');
-let menuOut = true;
+let menuOut = false;
 
-hamburger.addEventListener('click', (e)=>{
+console.log(hamburger.children[0])
+
+hamburger.addEventListener('click', ()=>{
     if(!menuOut){
         menu.style.display = "flex";
         menu.style.animation = "menu-slide-in .3s ease-in forwards";
+        hamburger.children[0].style.animation = "top-line .4s ease-in forwards";
+        hamburger.children[1].style.animation = "mid-line .4s ease-in forwards";
+        hamburger.children[2].style.animation = "bottom-line .4s ease-in forwards";
         for(i=0; i < 3; i++){
-            hamburger.children[0].children[i].style.stroke="#fff";
+            hamburger.children[i].style.background="#fff";
         }
         menuOut = true
       
     }else{
         menu.style.animation = "menu-slide-out .3s ease-out forwards";
+        hamburger.children[0].style.animation = "top-line .4s ease-in forwards reverse";
+        hamburger.children[1].style.animation = "mid-line .4s ease-in forwards reverse";
+        hamburger.children[2].style.animation = "bottom-line .4s ease-in forwards reverse";
         for(i=0; i < 3; i++){
-            hamburger.children[0].children[i].style.stroke="#000";
+            hamburger.children[i].style.background="#000";
         }
         menuOut = false
     }

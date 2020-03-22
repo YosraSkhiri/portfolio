@@ -39,10 +39,6 @@ html, body{
     overflow-x: hidden; 
 }
 
-html {
-    /*font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));*/
-}
-
 nav{
     display: flex;
     padding: 1em 3.5em;
@@ -100,6 +96,7 @@ nav{
     width: fit-content;
     margin: auto;
     position: relative;
+    z-index: 1;
 }
 
 .nav-link > a > span::before{
@@ -136,15 +133,63 @@ nav{
 
 .nav-link + .nav-link{ border-left: 1px solid rgba(0, 0, 0, 0.2); }
 
-.hamburger{ 
+#hamburger{ 
     display: none; 
     z-index: 1;
+    
 }
 
 @media only screen and (max-width: 768px) {
-    .hamburger{ 
-        display: block; 
+    #hamburger{ 
+        display: flex; 
+        width: 30px;
+        height: 22px;
+        justify-content: space-between;
+        flex-direction: column;
         align-self: center;
+    }
+
+    #hamburger::before, #hamburger::after{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #242424;
+    }
+
+    
+    #hamburger > span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #242424;
+    }
+
+    @keyframes top-line {
+        from{
+            transform: rotate(0deg) translateY(0%);
+        }
+        to{
+            transform: rotate(40deg) translateY(410%);
+        }
+    }
+
+    @keyframes bottom-line {
+        from{
+            transform: rotate(0deg) translateY(0%);
+        }
+        to{
+            transform: rotate(-40deg) translateY(-410%);
+        }
+    }
+
+    @keyframes mid-line {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
     }
 
     .nav-links{
@@ -156,7 +201,7 @@ nav{
         height: 100%;
         background-color: #72D9E0;
         opacity: .9;    
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
 
     .nav-link > a > span::before, .nav-link > a > span::after{
