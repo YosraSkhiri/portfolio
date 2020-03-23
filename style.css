@@ -156,7 +156,9 @@ nav {
 
 .intro {
   display: flex;
-  margin: 3em 10em;
+  max-width: 70em;
+  padding: 0 2em;
+  margin: auto;
   position: relative;
   z-index: 1;
 }
@@ -188,6 +190,13 @@ nav {
   align-self: center;
   justify-self: center;
   margin-bottom: 1em;
+}
+
+.main-img{
+  min-width: 50%;
+  max-width: 20em;
+  justify-self: center;
+  align-self: center;
 }
 
 .btn {
@@ -377,5 +386,37 @@ nav {
 
   .nav-link > a > span {
     margin: auto;
+  }
+
+  .intro {
+    flex-direction: column;
+  }
+
+  .main-img{
+    order: 1;
+    margin-bottom: 1.7em;
+  }
+
+  .intro-text{
+    order: 2;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  .main-img{
+    margin-bottom: 1.7em;
+  }
+
+  .intro-title{
+    font-size: 1.3rem;
+  }
+  .intro-text{
+    font-size: .9rem;
+  }
+
+  .btn-cv{
+    width: 100%;
   }
 }
