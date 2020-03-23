@@ -409,6 +409,18 @@ nav {
     order: 2;
   }
 
+  .social-icons {
+    margin-top: 3em;
+    position: static;
+    width: 150px;
+    height: 30px;
+  }
+  
+  .social-icons > ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
 }
 
 @media only screen and (max-width: 425px) {
