@@ -158,21 +158,26 @@ nav {
   display: flex;
   max-width: 70em;
   padding: 0 2em;
-  margin: auto;
+  margin: 3em auto;
   position: relative;
   z-index: 1;
 }
 
-.intro-title{
+.intro-content {
+  align-self: center;
+  justify-self: center;
+}
+
+.intro-title {
   font-family: "Permanent Marker";
   font-size: 2rem;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
   letter-spacing: 1px;
   position: relative;
 }
 
-.intro-title::after{
-  content: '';
+.intro-title::after {
+  content: "";
   display: block;
   position: absolute;
   top: 40%;
@@ -184,15 +189,13 @@ nav {
 }
 
 .intro-text {
-  opacity: .8;
+  opacity: 0.8;
   font-size: 1.2rem;
   line-height: 1.5;
-  align-self: center;
-  justify-self: center;
   margin-bottom: 1em;
 }
 
-.main-img{
+.main-img {
   min-width: 50%;
   max-width: 20em;
   justify-self: center;
@@ -205,19 +208,19 @@ nav {
   position: relative;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: var(--light-secondary-color);
   border: 2px solid var(--dark-bg-color);
 }
 
-.btn-cv{
+.btn-cv {
   width: 8em;
   height: 2.7em;
   font-size: 1rem;
 }
 
 .btn::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -228,9 +231,9 @@ nav {
   left: 2%;
 }
 
-.btn-primary::after{
+.btn-primary::after {
   border: 2px solid var(--dark-bg-color);
-  background-color: #55A7AC;
+  background-color: #55a7ac;
 }
 
 .btn:active {
@@ -238,26 +241,17 @@ nav {
   left: 2%;
 }
 
-.btn:active::after{
+.btn:active::after {
   top: 0%;
   left: 0%;
 }
 
 .bg-text {
-  font-size: 12vw;
   position: absolute;
-  margin: 0;
-  bottom: -35px;
+  bottom: 0;
   left: 50%;
-  white-space: nowrap;
   transform: translateX(-50%);
-  user-select: none;
-  color: #E6EEF2;
-  text-shadow:
-   -1px -1px 0 #A7A7A7,  
-    1px -1px 0 #A7A7A7,
-    -1px 1px 0 #A7A7A7,
-     1px 1px 0 #A7A7A7;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -392,31 +386,34 @@ nav {
     flex-direction: column;
   }
 
-  .main-img{
+  .intro-text {
+    font-size: 1.3rem;
+  }
+
+  .main-img {
     order: 1;
     margin-bottom: 1.7em;
   }
 
-  .intro-text{
+  .intro-content {
     order: 2;
   }
 
 }
 
 @media only screen and (max-width: 425px) {
-
-  .main-img{
+  .main-img {
     margin-bottom: 1.7em;
   }
 
-  .intro-title{
+  .intro-title {
     font-size: 1.3rem;
   }
-  .intro-text{
-    font-size: .9rem;
+  .intro-text {
+    font-size: 0.9rem;
   }
 
-  .btn-cv{
+  .btn-cv {
     width: 100%;
   }
 }

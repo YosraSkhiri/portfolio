@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1983" height="305" viewBox="0 0 1983 170">
+  <defs>
+    <filter id="I_MAKE_WEBSITES" x="0" y="0" width="1983" height="305" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="background" transform="translate(408.127 91.993) rotate(180)" opacity="0.4">
+    <g transform="matrix(-1, 0, 0, -1, 408.13, 91.99)" filter="url(#I_MAKE_WEBSITES)">
+      <text id="I_MAKE_WEBSITES-2" data-name="I MAKE WEBSITES" transform="translate(9 234)" fill="#e6eef2" stroke="#a7a7a7" stroke-width="3" font-size="234" font-family="Roboto-Black, Roboto" font-weight="800"><tspan x="0" y="0">I MAKE WEBSITES</tspan></text>
+    </g>
+  </g>
+</svg>
