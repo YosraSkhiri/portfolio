@@ -387,6 +387,33 @@ nav {
   display: none;
 }
 
+.computer-bg {
+  width: 500px;
+  position: absolute;
+  opacity: .15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-illu {
+ top: 85%;
+ left: 5%;
+}
+
+.right-illu {
+  top: 95%;
+  left: 95%;
+  transform: rotate(0deg);
+}
+
+.right-illu, .left-illu {
+position: absolute;
+transform: translate(-50%, -50%);
+width: 300px;
+opacity: .8;
+}
+
 @media only screen and (max-width: 768px) {
   #hamburger {
     display: flex;
@@ -581,6 +608,11 @@ nav {
     width: 0;
   }
 
+  .computer-bg {
+    width: 400px;
+    top: 87%;
+    left: 25%;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -605,5 +637,9 @@ nav {
 
   .mobile-titles{
     flex-direction: column;
+  }
+  
+  .left-illu {
+    display: none;
   }
 }
