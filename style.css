@@ -272,6 +272,15 @@ nav {
   width: 100%;
 }
 
+.mode-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  margin: 2em;
+}
+
 @media only screen and (max-width: 768px) {
   #hamburger {
     display: flex;
