@@ -3,8 +3,6 @@ let menu = document.querySelector('.nav-links');
 let edu = document.querySelector('#edu');
 let job = document.querySelector('#job');
 
-console.log()
-
 let eduContent = document.querySelector('#edu-content');
 let jobContent = document.querySelector('#job-content');
 let menuOut = false;
@@ -21,7 +19,7 @@ hamburger.addEventListener('click', function() {
     this.classList.toggle('active');
   });
 
-if(document.documentElement.clientWidth <= 768){
+if(document.documentElement.clientWidth <= 768 && window.location.href==="http://127.0.0.1:5500/about.html"){
   jobContent.style.display = "none"
   edu.addEventListener('click', function() {
     if(!showedu){
