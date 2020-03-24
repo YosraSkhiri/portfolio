@@ -10,19 +10,19 @@
 
 <body>
     <nav>
-        <div class="logo"><span>Yosra</span><span>Skhiri</span></div>
+        <div class="logo"><a href="/index.html"><span>Yosra</span><span>Skhiri</span></a></div>
         <div id="hamburger">
             <span id="line"></span>
         </div>
         <ul class="nav-links">
-            <li class="nav-link"><a href="#"><span>Home</span></a></li>
-            <li class="nav-link"><a href="#"><span>About me</span></a></li>
+            <li class="nav-link"><a href="/index.html"><span>Home</span></a></li>
+            <li class="nav-link"><a href="/about.html"><span>About me</span></a></li>
             <li class="nav-link"><a href="#"><span>Skills</span></a></li>
             <li class="nav-link"><a href="#"><span>projects</span></a></li>
             <li class="social-icons">
                 <ul>
                     <li><a href="https://github.com/YosraSkhiri"><img src="img/github_icon.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/linkedin_icon.svg" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/yosra-skhiri"><img src="img/linkedin_icon.svg" alt=""></a></li>
                     <li><a href="#"><img src="img/mail_icon.svg" alt=""></a></li>
                 </ul>
             </li>
@@ -32,7 +32,11 @@
     
     <main class="container about-section">
         <div class="edu">
-            <h1 class="intro-title about-title">Education</h1>
+            <div class="mobile-titles">
+            <h1 class="intro-title about-title" id="edu">Education</h1>
+            <h1 class="intro-title about-title mobile-title" id="job">Job Experience</h1>
+            </div>
+            <div id="edu-content">
             <div class="details">
                 <h2 class="details-date">2019 - 2020</h2>
                 <div class="details-text">
@@ -54,10 +58,11 @@
                     <p class="details-content">consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
             </div>
-           
+        </div>  
         </div>
         <div class="job">
             <h1 class="intro-title about-title">Job Experience</h1>
+        <div id="job-content">
             <div class="details">
                 <h2 class="details-date">2019 - 2020</h2>
                 <div class="details-text">
@@ -65,6 +70,7 @@
                     <p class="details-content">consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 

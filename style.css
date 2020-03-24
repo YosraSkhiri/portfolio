@@ -108,11 +108,11 @@ nav {
   margin-left: 0.4em;
 }
 
-.logo > span:nth-child(1) {
+.logo > a > span:nth-child(1) {
   font-weight: 300;
 }
 
-.logo > span:nth-child(2) {
+.logo > a > span:nth-child(2) {
   font-weight: 500;
 }
 
@@ -337,25 +337,55 @@ nav {
 
 .about-section {
   display: flex;
-  justify-content: space-around;
+}
+
+.edu {
+  border-right: 1px solid #a3a3a3;
+}
+
+.edu,
+.job {
+  padding: 0em 7%;
+  justify-self: center;
 }
 
 .details {
   display: flex;
+  margin-bottom: 1.7em;
 }
 
 .about-title {
- margin-bottom: 1em;
- font-size: 1.7rem;
- letter-spacing: 3px;
- text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  letter-spacing: 4px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-25%);
 }
 
 .details-date {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: lighter;
+  white-space: nowrap;
 }
 
+.details-title {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.details-text {
+  font-size: 0.9em;
+  margin-left: 3em;
+}
+
+.details-content {
+  opacity: 0.85;
+}
+
+.mobile-title {
+  display: none;
+}
 
 @media only screen and (max-width: 768px) {
   #hamburger {
@@ -508,10 +538,47 @@ nav {
     width: 150px;
     height: 30px;
   }
-  
+
   .social-icons > ul {
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .edu {
+    border-right: none;
+  }
+
+  .edu,
+.job {
+  padding: 0em;
+  justify-self: center;
+}
+
+  .mobile-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-title {
+    display: block;
+  }
+
+  .about-title {
+    left: 0%;
+    position: static;
+    transform: translateX(0%);
+  }
+
+  .job > .about-title {
+    display: none;
+  }
+
+  .mobile-titles > #job::after {
+    width: 0;
   }
 
 }
@@ -530,5 +597,13 @@ nav {
 
   .btn-cv {
     width: 100%;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+
+  .mobile-titles{
+    flex-direction: column;
   }
 }
