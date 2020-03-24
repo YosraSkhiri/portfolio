@@ -347,6 +347,9 @@ nav {
 .job {
   padding: 0em 7%;
   justify-self: center;
+  flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .details {
@@ -390,15 +393,15 @@ nav {
 .computer-bg {
   width: 500px;
   position: absolute;
-  opacity: .15;
+  opacity: 0.15;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .left-illu {
- top: 85%;
- left: 5%;
+  top: 85%;
+  left: 5%;
 }
 
 .right-illu {
@@ -407,11 +410,12 @@ nav {
   transform: rotate(0deg);
 }
 
-.right-illu, .left-illu {
-position: absolute;
-transform: translate(-50%, -50%);
-width: 300px;
-opacity: .8;
+.right-illu,
+.left-illu {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  opacity: 0.8;
 }
 
 @media only screen and (max-width: 768px) {
@@ -580,10 +584,10 @@ opacity: .8;
   }
 
   .edu,
-.job {
-  padding: 0em;
-  justify-self: center;
-}
+  .job {
+    padding: 0em;
+    justify-self: center;
+  }
 
   .mobile-titles {
     display: flex;
@@ -635,10 +639,10 @@ opacity: .8;
     flex-direction: column;
   }
 
-  .mobile-titles{
+  .mobile-titles {
     flex-direction: column;
   }
-  
+
   .left-illu {
     display: none;
   }
