@@ -47,6 +47,13 @@ body {
   overflow: hidden;
 }
 
+.container {
+  display: flex;
+  max-width: 70em;
+  padding: 0 2em;
+  margin: 3em auto;
+}
+
 nav {
   display: flex;
   padding: 1em 3.5em;
@@ -166,9 +173,6 @@ nav {
 
 .intro {
   display: flex;
-  max-width: 70em;
-  padding: 0 2em;
-  margin: 3em auto;
   position: relative;
   z-index: 1;
 }
@@ -183,6 +187,7 @@ nav {
   font-size: 2rem;
   margin-bottom: 0.2em;
   letter-spacing: 1px;
+  z-index: 1;
   position: relative;
 }
 
@@ -279,6 +284,27 @@ nav {
   z-index: 1;
   cursor: pointer;
   margin: 2em;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.details {
+  display: flex;
+}
+
+.about-title {
+ margin-bottom: 1em;
+ font-size: 1.7rem;
+ letter-spacing: 3px;
+ text-align: center;
+}
+
+.details-date {
+  font-size: .9rem;
+  font-weight: lighter;
 }
 
 @media only screen and (max-width: 768px) {
