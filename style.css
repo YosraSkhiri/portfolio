@@ -4,7 +4,7 @@
   mail: yosra.skhiri@gmail.com
 
   ------------------------------------------------
-  Table of Content
+  ***Table of Content***
   1- Fonts
   2- Variables
   3- Reset styles
@@ -84,10 +84,11 @@ body {
 }
 
 .container {
-  display: flex;
   max-width: 70em;
   padding: 0 2em;
   margin: 3em auto;
+  position: relative;
+  z-index: 3;
 }
 
 .computer-bg {
