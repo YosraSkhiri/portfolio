@@ -235,7 +235,7 @@ nav {
 
 #hamburger {
   display: none;
-  z-index: 4;
+  z-index: 6;
 }
 
 .mode-icon {
@@ -438,9 +438,9 @@ nav {
 .projects {
   display: grid;
   justify-content: center;
+  align-content: center;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-column-gap: 10px;
-  grid-row-gap: 50px;
+  grid-gap: 50px;
 }
 
 .project-card {
@@ -449,15 +449,20 @@ nav {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.6);
   display: flex;
-  position: relative;
   z-index: 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.card-img-container {
+  width: 100%;
+  display: flex;
+  background-color: #72d9e0;
+  border-radius: 25px 0 0 25px;
 }
 
 .card-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 25px 0 0 25px;
-  flex: 1;
+  margin: auto;
 }
 
 .card-content {
@@ -564,7 +569,7 @@ nav {
     height: 100%;
     background-color: #72d9e0;
     opacity: 0.9;
-    z-index: 3;
+    z-index: 5;
     transform: translateX(100%);
   }
 
@@ -686,6 +691,26 @@ nav {
     width: 400px;
     top: 87%;
     left: 25%;
+  }
+
+  .project-card {
+    width: 300px;
+    height: 310px;
+    flex-direction: column;
+  }
+
+  .card-img-container {
+    height: 150px;
+    border-radius: 25px 25px 0 0;
+    margin: auto;
+  }
+
+  .buttons-card {
+    width: 100%;
+  }
+
+  .btn-card {
+    flex: 1;
   }
 }
 
