@@ -90,6 +90,34 @@ body {
   margin: 3em auto;
 }
 
+.computer-bg {
+  width: 500px;
+  position: fixed;
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.right-illu,
+.left-illu {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  opacity: 0.8;
+}
+
+.left-illu {
+  top: 85%;
+  left: 5%;
+}
+
+.right-illu {
+  top: 95%;
+  left: 95%;
+}
+
 /* /Layout */
 
 /* 5-Navigation */
@@ -207,7 +235,7 @@ nav {
 
 #hamburger {
   display: none;
-  z-index: 3;
+  z-index: 4;
 }
 
 .mode-icon {
@@ -270,7 +298,7 @@ nav {
 }
 
 .bg-text {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -366,7 +394,7 @@ nav {
   justify-self: center;
   flex: 1;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .details {
@@ -405,35 +433,6 @@ nav {
 
 .mobile-title {
   display: none;
-}
-
-.computer-bg {
-  width: 500px;
-  position: absolute;
-  opacity: 0.15;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.left-illu {
-  top: 85%;
-  left: 5%;
-}
-
-.right-illu {
-  top: 95%;
-  left: 95%;
-  transform: rotate(0deg);
-}
-
-.right-illu,
-.left-illu {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  opacity: 0.8;
 }
 
 .projects {
@@ -565,7 +564,7 @@ nav {
     height: 100%;
     background-color: #72d9e0;
     opacity: 0.9;
-    z-index: 2;
+    z-index: 3;
     transform: translateX(100%);
   }
 
