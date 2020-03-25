@@ -80,7 +80,7 @@ body {
   background-color: var(--light-bg-color);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
