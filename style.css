@@ -165,6 +165,36 @@ body {
   left: 0%;
 }
 
+.btn-primary.btn-deactivated {
+  border: 2px solid #579ca1;
+  color: #579ca1;
+  cursor: default;
+}
+
+.btn-primary.btn-deactivated::after {
+  border: 2px solid #579ca1;
+}
+
+.btn-secondary.btn-deactivated {
+  border: 2px solid #b9b950;
+  color: #b9b950;
+  cursor: default;
+}
+
+.btn-secondary.btn-deactivated::after {
+  border: 2px solid #b9b950;
+}
+
+.btn.btn-deactivated:active {
+  top: 0%;
+  left: 0%;
+}
+
+.btn.btn-deactivated:active::after {
+  top: 10%;
+  left: 2%;
+}
+
 /* /Buttons */
 
 /**/
