@@ -2,6 +2,7 @@ let hamburger = document.querySelector('#hamburger');
 let menu = document.querySelector('.nav-links');
 let edu = document.querySelector('#edu');
 let job = document.querySelector('#job');
+let mode = document.querySelector('#mode');
 
 let eduContent = document.querySelector('#edu-content');
 let jobContent = document.querySelector('#job-content');
@@ -37,6 +38,10 @@ if(document.documentElement.clientWidth <= 768 && window.location.href==="http:/
     }
   })
 }
+
+mode.addEventListener('click', function(){
+  console.log('hi');
+})
 
 
 

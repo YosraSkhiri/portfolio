@@ -130,7 +130,7 @@ body {
   width: 4.8em;
   height: 1.9em;
   margin-right: 1.2em;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .btn::after {
@@ -447,44 +447,43 @@ nav {
 /* Skills page */
 
 .skill-title {
- font-family: "Permanent Marker";
- font-size: 3rem;
- letter-spacing: 2px;
- margin-bottom: 1em;
- position: relative;
+  font-family: "Permanent Marker";
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+  position: relative;
 }
 
 .skill-title::after {
-  content: '';
+  content: "";
   display: block;
   background-color: black;
   width: 20em;
   height: 1px;
   position: absolute;
   top: 50%;
-  left: 11.5em;
+  left: 12.6em;
 }
 
-.skill-container{
+.skill-container {
   display: flex;
   justify-content: space-around;
 }
 
 .detailed-skills > h2 {
   margin-bottom: 1em;
-  opacity: .85;
+  opacity: 0.85;
 }
 
-.items{
+.items {
   display: flex;
   justify-content: space-around;
   width: 16em;
 }
 
 .items > ul > li {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
-
 
 /* /Skills page */
 
@@ -521,7 +520,7 @@ nav {
 }
 
 .card-content {
-  padding: .6em;
+  padding: 0.6em;
 }
 
 .card-date {
@@ -530,7 +529,7 @@ nav {
 }
 
 .card-title {
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-bottom: 0.5em;
 }
 
@@ -768,6 +767,18 @@ nav {
 
   .btn-card {
     flex: 1;
+  }
+
+  .skill-container {
+    flex-direction: column;
+  }
+
+  .detailed-skills {
+    align-self: center;
+  }
+
+  .skill-title {
+    font-size: 2rem;
   }
 }
 
