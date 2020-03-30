@@ -9,6 +9,7 @@
   2- Variables
   3- Reset styles
   4- Layout 
+  5- Background
   5- Navigation 
   6- Home page
   7- about page
@@ -91,6 +92,83 @@ body {
   z-index: 3;
 }
 
+/* /Layout */
+
+/* Buttons */
+
+.btn {
+  font-weight: bold;
+  border-radius: 50px;
+  position: relative;
+  display: block;
+}
+
+.btn > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-primary {
+  background-color: var(--light-secondary-color);
+  border: 2px solid var(--dark-bg-color);
+}
+
+.btn-secondary {
+  background-color: var(--light-primary-color);
+  border: 2px solid var(--dark-bg-color);
+}
+
+.btn-cv {
+  width: 8em;
+  height: 2.7em;
+  font-size: 1rem;
+}
+
+.btn-card {
+  width: 4.8em;
+  height: 1.9em;
+  margin-right: 1.2em;
+  font-size: .85rem;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50px;
+  z-index: -1;
+  top: 10%;
+  left: 2%;
+}
+
+.btn-primary::after {
+  border: 2px solid var(--dark-bg-color);
+  background-color: #55a7ac;
+}
+
+.btn-secondary::after {
+  border: 2px solid var(--dark-bg-color);
+  background-color: #acac06;
+}
+
+.btn:active {
+  top: 10%;
+  left: 2%;
+}
+
+.btn:active::after {
+  top: 0%;
+  left: 0%;
+}
+
+/* /Buttons */
+
+/**/
+
 .computer-bg {
   width: 500px;
   position: fixed;
@@ -118,8 +196,7 @@ body {
   top: 95%;
   left: 95%;
 }
-
-/* /Layout */
+/**/
 
 /* 5-Navigation */
 
@@ -308,78 +385,7 @@ nav {
 
 /* /Home page */
 
-/* Buttons */
-
-.btn {
-  font-weight: bold;
-  border-radius: 50px;
-  position: relative;
-  display: block;
-}
-
-.btn > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn-primary {
-  background-color: var(--light-secondary-color);
-  border: 2px solid var(--dark-bg-color);
-}
-
-.btn-secondary {
-  background-color: var(--light-primary-color);
-  border: 2px solid var(--dark-bg-color);
-}
-
-.btn-cv {
-  width: 8em;
-  height: 2.7em;
-  font-size: 1rem;
-}
-
-.btn-card {
-  width: 4.8em;
-  height: 1.9em;
-  margin-right: 1.2em;
-  font-size: .85rem;
-}
-
-.btn::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 50px;
-  z-index: -1;
-  top: 10%;
-  left: 2%;
-}
-
-.btn-primary::after {
-  border: 2px solid var(--dark-bg-color);
-  background-color: #55a7ac;
-}
-
-.btn-secondary::after {
-  border: 2px solid var(--dark-bg-color);
-  background-color: #acac06;
-}
-
-.btn:active {
-  top: 10%;
-  left: 2%;
-}
-
-.btn:active::after {
-  top: 0%;
-  left: 0%;
-}
-
-/* /Buttons */
+/* About page */
 
 .about-section {
   display: flex;
@@ -435,6 +441,54 @@ nav {
 .mobile-title {
   display: none;
 }
+
+/* /About page */
+
+/* Skills page */
+
+.skill-title {
+ font-family: "Permanent Marker";
+ font-size: 3rem;
+ letter-spacing: 2px;
+ margin-bottom: 1em;
+ position: relative;
+}
+
+.skill-title::after {
+  content: '';
+  display: block;
+  background-color: black;
+  width: 20em;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 11.5em;
+}
+
+.skill-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.detailed-skills > h2 {
+  margin-bottom: 1em;
+  opacity: .85;
+}
+
+.items{
+  display: flex;
+  justify-content: space-around;
+  width: 16em;
+}
+
+.items > ul > li {
+  margin-bottom: .5em;
+}
+
+
+/* /Skills page */
+
+/* Projects page */
 
 .projects {
   display: grid;
@@ -493,6 +547,8 @@ nav {
 .buttons-card {
   display: flex;
 }
+
+/* Projects page */
 
 @media only screen and (max-width: 768px) {
   #hamburger {
