@@ -359,7 +359,7 @@ nav {
 
 /* 6-Home page */
 
-.intro {
+.intro-container {
   display: flex;
   position: relative;
   z-index: 1;
@@ -383,7 +383,7 @@ nav {
   }
 }
 
-.intro-title {
+.default-title {
   font-family: "Permanent Marker";
   font-size: 2rem;
   margin-bottom: 0.2em;
@@ -392,7 +392,7 @@ nav {
   position: relative;
 }
 
-.intro-title::after {
+.default-title::after {
   content: "";
   display: block;
   position: absolute;
@@ -420,7 +420,7 @@ nav {
   margin-bottom: 1em;
 }
 
-.main-img {
+.intro-img {
   min-width: 50%;
   max-width: 20em;
   justify-self: center;
@@ -439,16 +439,16 @@ nav {
 
 /* About page */
 
-.about-section {
+.about-container {
   display: flex;
 }
 
-.edu {
+.edus-content {
   border-right: 1px solid #a3a3a3;
 }
 
-.edu,
-.job {
+.edus-content,
+.jobs-content {
   padding: 0em 7%;
   justify-self: center;
   flex: 1;
@@ -462,9 +462,9 @@ nav {
 }
 
 .about-title {
-  font-size: 1.5em;
   margin-bottom: 1em;
   letter-spacing: 4px;
+  white-space: nowrap;
   position: relative;
   left: 50%;
   transform: translateX(-25%);
@@ -524,7 +524,7 @@ nav {
 
 .detailed-skills > h2 {
   margin-bottom: 1em;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .items {
@@ -729,7 +729,7 @@ nav {
     margin: auto;
   }
 
-  .intro {
+  .intro-container {
     flex-direction: column;
   }
 
@@ -737,7 +737,7 @@ nav {
     font-size: 1.3rem;
   }
 
-  .main-img {
+  .intro-img {
     order: 1;
     margin-bottom: 1.7em;
   }
@@ -758,16 +758,16 @@ nav {
     justify-content: space-around;
   }
 
-  .about-section {
+  .about-container {
     flex-direction: column;
   }
 
-  .edu {
+  .edus-content {
     border-right: none;
   }
 
   .edu,
-  .job {
+  .jobs-content {
     padding: 0em;
     justify-self: center;
   }
@@ -787,7 +787,7 @@ nav {
     transform: translateX(0%);
   }
 
-  .job > .about-title {
+  .jobs-content > .about-title {
     display: none;
   }
 
@@ -835,11 +835,11 @@ nav {
 }
 
 @media only screen and (max-width: 425px) {
-  .main-img {
+  .intro-img {
     margin-bottom: 1.7em;
   }
 
-  .intro-title {
+  .default-title {
     font-size: 1.3rem;
   }
   .intro-text {
@@ -860,5 +860,11 @@ nav {
 
   .left-illu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .mobile-titles {
+    flex-direction: column;
   }
 }
