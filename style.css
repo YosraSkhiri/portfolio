@@ -366,8 +366,21 @@ nav {
 }
 
 .intro-content {
+  position: relative;
   align-self: center;
   justify-self: center;
+  animation: intro-animation 1.5s ease-out forwards;
+}
+
+@keyframes intro-animation {
+  from{
+    left: -15%;
+    opacity: 0;
+  }
+  to{
+    left: 0%;
+    opacity: 1;
+  }
 }
 
 .intro-title {
@@ -386,9 +399,18 @@ nav {
   top: 40%;
   left: 0;
   z-index: -1;
-  width: 32%;
   height: 15px;
   background-color: var(--light-primary-color);
+  animation: title 1s ease-out forwards;
+}
+
+@keyframes title {
+  from{
+    width: 0%;
+  }
+  to {
+    width: 5.4em;
+  }
 }
 
 .intro-text {
