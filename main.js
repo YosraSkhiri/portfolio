@@ -49,7 +49,12 @@ if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
 }
 
 mode.addEventListener('click', function(){
-  console.log('hi');
+  
+  document.documentElement.style.setProperty('--light-bg-color', getComputedStyle(document.documentElement)
+  .getPropertyValue('--dark-bg-color'));
+  document.documentElement.style.setProperty('--light-text-color', getComputedStyle(document.documentElement)
+  .getPropertyValue('--dark-text-color'));
+
 })
 
 function currentPage(page){
