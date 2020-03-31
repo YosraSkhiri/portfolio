@@ -426,7 +426,7 @@ nav {
   position: relative;
   align-self: center;
   justify-self: center;
-  animation: intro-animation 1.5s ease-out forwards;
+  animation: intro-animation 1.2s ease-out forwards;
 }
 
 @keyframes intro-animation {
@@ -458,7 +458,19 @@ nav {
   z-index: -1;
   height: 15px;
   background-color: var(--light-primary-color);
-  animation: title 1s ease-out forwards;
+  animation: title 1.4s ease-in-out forwards;
+}
+
+.default-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: -1;
+  height: 15px;
+  background-color: var(--light-secondary-color);
+  animation: title 1.2s ease-in-out forwards;
 }
 
 @keyframes title {
@@ -483,6 +495,18 @@ nav {
   justify-self: center;
   align-self: center;
   position: relative;
+  animation: intro-animation-illu 1.2s ease-out forwards;
+}
+
+@keyframes intro-animation-illu {
+  from{
+    right: -15%;
+    opacity: 0;
+  }
+  to{
+    right: 0%;
+    opacity: 1;
+  }
 }
 
 .main-left-illu, .main-right-illu{
