@@ -98,10 +98,13 @@
   --dark-primary-color: #ff0000;
 
   --light-secondary-color: #72d9e0;
-  /*--dark-secondary-color: #72D9E0;*/
+  --dark-secondary-color: #0000FF;
 
   --light-btn-primary-bg-aftr-color: #55a7ac;
   --light-btn-primary-deact-color: #579ca1;
+
+  --light-btn-primary-color: #72d9e0;
+  --light-btn-secondary-color: #ffff00;
 
   --light-btn-scondary-bg-aftr-color: #acac06;
   --light-btn-scondary-deact-color: #b9b950;
@@ -180,16 +183,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: var(--light-text-color);
 }
 
 .btn-primary {
-  background-color: var(--light-secondary-color);
-  border: 2px solid var(--dark-bg-color);
+  background-color: var(--light-btn-primary-color);
+  border: 2px solid var(--light-text-color);
 }
 
 .btn-secondary {
-  background-color: var(--light-primary-color);
-  border: 2px solid var(--dark-bg-color);
+  background-color: var(--light-btn-secondary-color);
+  border: 2px solid var(--light-text-color);
 }
 
 .btn-cv {
@@ -218,12 +222,12 @@ body {
 }
 
 .btn-primary::after {
-  border: 2px solid var(--dark-bg-color);
+  border: 2px solid var(--light-text-color);
   background-color: var(--light-btn-primary-bg-aftr-color);
 }
 
 .btn-secondary::after {
-  border: 2px solid var(--dark-bg-color);
+  border: 2px solid var(--light-text-color);
   background-color: var(--light-btn-scondary-bg-aftr-color);
 }
 

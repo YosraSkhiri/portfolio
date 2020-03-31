@@ -12,25 +12,27 @@ let showedu = true;
 let computerIllu = document.querySelector('#computer');
 let rightIllu = document.querySelector('#right-illu');
 let leftIllu = document.querySelector('#left-illu');
-let mvtEnv = document.querySelector('body');
+let rightIlluBg = document.querySelector('#right-illu-bg');
+let leftIlluBg = document.querySelector('#left-illu-bg');
+
 
 hamburger.addEventListener('click', function() {
   if(!menuOut){
-    menu.style.animation = "menu-slide-in .3s ease-in forwards";
+    menu.style.animation = 'menu-slide-in .3s ease-in forwards';
     menuOut = true;
   }else{
-    menu.style.animation = "menu-slide-out .3s ease-out forwards";
+    menu.style.animation = 'menu-slide-out .3s ease-out forwards';
     menuOut =false;
   }
     this.classList.toggle('active');
   });
 
-if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
-  jobContent.style.display = "none"
+if(document.documentElement.clientWidth <= 768 && currentPage('about.html')){
+  jobContent.style.display = 'none'
   edu.addEventListener('click', function() {
     if(!showedu){
-      eduContent.style.display = "block";
-      jobContent.style.display = "none"
+      eduContent.style.display = 'block';
+      jobContent.style.display = 'none';
       edu.classList.toggle('inactive-tab');
       job.classList.toggle('inactive-tab');
       showedu = true;
@@ -39,8 +41,8 @@ if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
   
   job.addEventListener('click', function() {
     if(showedu){
-      eduContent.style.display = "none";
-      jobContent.style.display = "block"
+      eduContent.style.display = 'none';
+      jobContent.style.display = 'block';
       job.classList.toggle('inactive-tab');
       edu.classList.toggle('inactive-tab');
       showedu = false;
@@ -48,16 +50,74 @@ if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
   })
 }
 
+let colors = [
+  'bg-color',
+  'text-color',
+  'primary-color',
+  'secondary-color'
+];
+
+let lightColors = [
+  '#fcfcfc',
+  '#464646',
+  '#ffff00',
+  '#72d9e0'
+]
+
+if(document.cookie === null || document.cookie === ''){
+  document.cookie = 'mode=light; path=/; max-age=‭172800‬';
+}
+
+let currentMode = document.cookie.split(';')[0].substr(5);
+
+if(currentMode === 'dark'){
+  for(let i=0; i<colors.length; i++){
+    document.documentElement.style.setProperty('--light-'+colors[i], getComputedStyle(document.documentElement)
+  .getPropertyValue('--dark-'+colors[i]));
+  }
+  mode.children[0].src = 'img/light_mode.svg';
+
+  if(currentPage('index.html')){
+    computerIllu.src = 'img/main_illustration_dark.svg';
+  }
+  rightIllu.src = 'img/right_illu_dark.svg';
+  leftIllu.src = 'img/left_illu_dark.svg';
+}
+
 mode.addEventListener('click', function(){
   
-  document.documentElement.style.setProperty('--light-bg-color', getComputedStyle(document.documentElement)
-  .getPropertyValue('--dark-bg-color'));
-  document.documentElement.style.setProperty('--light-text-color', getComputedStyle(document.documentElement)
-  .getPropertyValue('--dark-text-color'));
+  if(currentMode === 'light'){
+    document.cookie = 'mode=dark; path=/; max-age=‭172800';
+    currentMode = document.cookie.split(';')[0].substr(5);
+
+    for(let i=0; i<colors.length; i++){
+      document.documentElement.style.setProperty('--light-'+colors[i], getComputedStyle(document.documentElement)
+    .getPropertyValue('--dark-'+colors[i]));
+    }
+    mode.children[0].src = 'img/light_mode.svg';
+    rightIllu.src = 'img/right_illu_dark.svg';
+    leftIllu.src = 'img/left_illu_dark.svg';
+    if(currentPage('index.html')){
+      computerIllu.src = 'img/main_illustration_dark.svg';
+    }
+  }else{
+    document.cookie = 'mode=light; path=/; max-age=‭172800';
+    currentMode = document.cookie.split(';')[0].substr(5);
+
+    for(let i=0; i<colors.length; i++){
+      document.documentElement.style.setProperty('--light-'+colors[i], lightColors[i]);
+    }
+    mode.children[0].src = 'img/Night_mode.svg';
+    rightIllu.src = 'img/right_illu.svg';
+    leftIllu.src = 'img/left_illu.svg';
+    if(currentPage('index.html')){
+      computerIllu.src = 'img/main_illustration.svg';
+    }
+  }
 
 })
 
 function currentPage(page){
-  if(page === "index.html" && window.location.href.substr(-4) !== "html") return true;
+  if(page === 'index.html' && window.location.href.substr(-4) !== 'html') return true;
   return window.location.href.substr(-(page.length)) === page;
 }
