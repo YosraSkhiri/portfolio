@@ -885,15 +885,18 @@ nav {
   .about-title {
     left: 0%;
     position: static;
+    margin-right: .4em;
+    margin-left: .4em;
     transform: translateX(0%);
+  }
+ 
+
+  .default-title.inactive-tab::after, .default-title.inactive-tab::before {
+    display: none;
   }
 
   .jobs-content > .about-title {
     display: none;
-  }
-
-  .mobile-titles > #job::after {
-    width: 0;
   }
 
   .computer-bg {
@@ -969,7 +972,7 @@ nav {
 }
 
 @media screen and (max-width: 590px) {
-  .mobile-titles {
-    flex-direction: column;
+  .about-title {
+    font-size: 1.4rem;
   }
 }

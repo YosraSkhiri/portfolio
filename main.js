@@ -31,6 +31,8 @@ if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
     if(!showedu){
       eduContent.style.display = "block";
       jobContent.style.display = "none"
+      edu.classList.toggle('inactive-tab');
+      job.classList.toggle('inactive-tab');
       showedu = true;
     }
   })
@@ -39,6 +41,8 @@ if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
     if(showedu){
       eduContent.style.display = "none";
       jobContent.style.display = "block"
+      job.classList.toggle('inactive-tab');
+      edu.classList.toggle('inactive-tab');
       showedu = false;
     }
   })
