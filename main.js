@@ -25,7 +25,7 @@ hamburger.addEventListener('click', function() {
     this.classList.toggle('active');
   });
 
-if(document.documentElement.clientWidth <= 768 && window.location.href==="http://127.0.0.1:5500/about.html"){
+if(document.documentElement.clientWidth <= 768 && currentPage("about.html")){
   jobContent.style.display = "none"
   edu.addEventListener('click', function() {
     if(!showedu){
@@ -48,31 +48,7 @@ mode.addEventListener('click', function(){
   console.log('hi');
 })
 
-if(document.documentElement.clientWidth >= 1024 && window.location.href==="http://127.0.0.1:5500/index.html"){
-
-mvtEnv.addEventListener('mousemove', function(e){
-  let coord = computerIllu.getBoundingClientRect();
-  let coordllu1 = rightIllu.getBoundingClientRect();
-  let coordllu2 = leftIllu.getBoundingClientRect();
-
-  let xDistance = e.pageX - coord.x;
-  let yDistance = e.pageY - coord.y;
-
-  computerIllu.style.left = (-xDistance/40)+'px';
-  computerIllu.style.top = (-yDistance/30)+'px';
-  computerIllu.style.transition = 'ease-in-out'
-
-  let illxDistance = 2*e.pageX - (coordllu2.x + coordllu1.x);
-  let illyDistance = 2*e.pageY - (coordllu2.y + coordllu1.y);
-
-  rightIllu.style.right = (-illxDistance/60)+'px';
-  rightIllu.style.top = (illyDistance/30)+'px';
-  rightIllu.style.transition = 'ease-in-out';
-
-  leftIllu.style.left = (illxDistance/60)+'px';
-  leftIllu.style.bottom = (-illyDistance/30)+'px';
-  leftIllu.style.transition = 'ease-in-out';
-})
-
+function currentPage(page){
+  if(page === "index.html" && window.location.href.substr(-4) !== "html") return true;
+  return window.location.href.substr(-(page.length)) === page;
 }
-
