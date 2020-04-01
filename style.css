@@ -23,65 +23,76 @@
 /* 1-Fonts */
 
 @font-face {
-    font-family: 'roboto condensed';
-    src: url(fonts/roboto_condensed/robotocondensed-light-webfont.eot);
-    src: url(fonts/roboto_condensed/robotocondensed-light-webfont.eot?#iefix) format('embedded-opentype'),
-         url(fonts/roboto_condensed/robotocondensed-light-webfont.woff2) format('woff2'),
-         url(fonts/roboto_condensed/robotocondensed-light-webfont.woff) format('woff'),
-         url(fonts/roboto_condensed/robotocondensed-light-webfont.ttf) format('truetype'),
-         url(fonts/roboto_condensed/robotocondensed-light-webfont.svg#roboto_condensedlight) format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: 'roboto';
-  src: url(fonts/roboto/roboto-regular-webfont.eot);
-  src: url(fonts/roboto/roboto-regular-webfont.eot?#iefix) format('embedded-opentype'),
-       url(fonts/roboto/roboto-regular-webfont.woff2) format('woff2'),
-       url(fonts/roboto/roboto-regular-webfont.woff) format('woff'),
-       url(fonts/roboto/roboto-regular-webfont.ttf) format('truetype'),
-       url(fonts/roboto/roboto-regular-webfont.svg#robotoregular) format('svg');
+  font-family: "roboto condensed";
+  src: url(fonts/roboto_condensed/robotocondensed-light-webfont.eot);
+  src: url(fonts/roboto_condensed/robotocondensed-light-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(fonts/roboto_condensed/robotocondensed-light-webfont.woff2)
+      format("woff2"),
+    url(fonts/roboto_condensed/robotocondensed-light-webfont.woff)
+      format("woff"),
+    url(fonts/roboto_condensed/robotocondensed-light-webfont.ttf)
+      format("truetype"),
+    url(fonts/roboto_condensed/robotocondensed-light-webfont.svg#roboto_condensedlight)
+      format("svg");
   font-weight: 400;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
+  src: url(fonts/roboto/roboto-regular-webfont.eot);
+  src: url(fonts/roboto/roboto-regular-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(fonts/roboto/roboto-regular-webfont.woff2) format("woff2"),
+    url(fonts/roboto/roboto-regular-webfont.woff) format("woff"),
+    url(fonts/roboto/roboto-regular-webfont.ttf) format("truetype"),
+    url(fonts/roboto/roboto-regular-webfont.svg#robotoregular) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto";
   src: url(fonts/roboto/roboto-light-webfont.eot);
-  src: url(fonts/roboto/roboto-light-webfont.eot?#iefix) format('embedded-opentype'),
-       url(fonts/roboto/roboto-light-webfont.woff2) format('woff2'),
-       url(fonts/roboto/roboto-light-webfont.woff) format('woff'),
-       url(fonts/roboto/roboto-light-webfont.ttf) format('truetype'),
-       url(fonts/roboto/roboto-light-webfont.svg#robotolight) format('svg');
+  src: url(fonts/roboto/roboto-light-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(fonts/roboto/roboto-light-webfont.woff2) format("woff2"),
+    url(fonts/roboto/roboto-light-webfont.woff) format("woff"),
+    url(fonts/roboto/roboto-light-webfont.ttf) format("truetype"),
+    url(fonts/roboto/roboto-light-webfont.svg#robotolight) format("svg");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'roboto';
+  font-family: "roboto";
   src: url(fonts/roboto/roboto-medium-webfont.eot);
-  src: url(fonts/roboto/roboto-medium-webfont.eot?#iefix) format('embedded-opentype'),
-       url(fonts/roboto/roboto-medium-webfont.woff2) format('woff2'),
-       url(fonts/roboto/roboto-medium-webfont.woff) format('woff'),
-       url(fonts/roboto/roboto-medium-webfont.ttf) format('truetype'),
-       url(fonts/roboto/roboto-medium-webfont.svg#robotomedium) format('svg');
+  src: url(fonts/roboto/roboto-medium-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(fonts/roboto/roboto-medium-webfont.woff2) format("woff2"),
+    url(fonts/roboto/roboto-medium-webfont.woff) format("woff"),
+    url(fonts/roboto/roboto-medium-webfont.ttf) format("truetype"),
+    url(fonts/roboto/roboto-medium-webfont.svg#robotomedium) format("svg");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'permanent marker';
+  font-family: "permanent marker";
   src: url(fonts/permanent_marker/permanentmarker-regular-webfont.eot);
-  src: url(fonts/permanent_marker/permanentmarker-regular-webfont.eot?#iefix) format('embedded-opentype'),
-       url(fonts/permanent_marker/permanentmarker-regular-webfont.woff2) format('woff2'),
-       url(fonts/permanent_marker/permanentmarker-regular-webfont.woff) format('woff'),
-       url(fonts/permanent_marker/permanentmarker-regular-webfont.ttf) format('truetype'),
-       url(fonts/permanent_marker/permanentmarker-regular-webfont.svg#permanent_markerregular) format('svg');
+  src: url(fonts/permanent_marker/permanentmarker-regular-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(fonts/permanent_marker/permanentmarker-regular-webfont.woff2)
+      format("woff2"),
+    url(fonts/permanent_marker/permanentmarker-regular-webfont.woff)
+      format("woff"),
+    url(fonts/permanent_marker/permanentmarker-regular-webfont.ttf)
+      format("truetype"),
+    url(fonts/permanent_marker/permanentmarker-regular-webfont.svg#permanent_markerregular)
+      format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 /* /Fonts */
 
@@ -98,24 +109,39 @@
   --dark-primary-color: #ff0000;
 
   --light-secondary-color: #72d9e0;
-  --dark-secondary-color: #0000FF;
-
-  --light-btn-primary-bg-aftr-color: #55a7ac;
-  --light-btn-primary-deact-color: #579ca1;
+  --dark-secondary-color: #0000ff;
 
   --light-btn-primary-color: #72d9e0;
+  --dark-btn-primary-color: #9b9b9b;
+
   --light-btn-secondary-color: #ffff00;
+  --dark-btn-secondary-color: #4a02d1;
+
+  --light-btn-primary-bg-aftr-color: #55a7ac;
+  --dark-btn-primary-bg-aftr-color: #656565;
 
   --light-btn-scondary-bg-aftr-color: #acac06;
+  --dark-btn-scondary-bg-aftr-color: #2e037e;
+
+  --light-btn-primary-deact-color: #579ca1;
+  --dark-btn-primary-deact-color: #727272;
+
   --light-btn-scondary-deact-color: #b9b950;
+  --dark-btn-scondary-deact-color: #3d1c79;
 
   --light-separator-border-color: rgba(0, 0, 0, 0.2);
+  --dark-separator-border-color: rgb(97, 97, 97);
+
   --light-card-bg-color: rgba(255, 255, 255, 0.6);
+  --dark-card-bg-color: rgba(255, 255, 255, 0.15);
 
   --light-ham-color: #242424;
+  --dark-ham-color: #ffffff;
+
   --light-X-color: #ffffff;
 
   --light-active-nav-link-mobile: rgb(74, 194, 202);
+  --dark-active-nav-link-mobile: rgb(61, 61, 209);
 }
 
 /* /Variables */
@@ -243,8 +269,12 @@ body {
 
 .btn-primary.btn-deactivated {
   border: 2px solid var(--light-btn-primary-deact-color);
-  color: var(--light-btn-primary-deact-color);
+
   cursor: default;
+}
+
+.btn-primary.btn-deactivated > span {
+  color: var(--light-btn-primary-deact-color);
 }
 
 .btn-primary.btn-deactivated::after {
@@ -253,8 +283,11 @@ body {
 
 .btn-secondary.btn-deactivated {
   border: 2px solid var(--light-btn-scondary-deact-color);
-  color: var(--light-btn-scondary-deact-color);
   cursor: default;
+}
+
+.btn-secondary.btn-deactivated > span {
+  color: var(--light-btn-scondary-deact-color);
 }
 
 .btn-secondary.btn-deactivated::after {
@@ -358,7 +391,6 @@ nav {
   width: 4.4em;
   text-align: center;
   color: var(--light-text-color);
-
 }
 
 .nav-link > a > span {
@@ -453,11 +485,11 @@ nav {
 }
 
 @keyframes intro-animation {
-  from{
+  from {
     left: -15%;
     opacity: 0;
   }
-  to{
+  to {
     left: 0%;
     opacity: 1;
   }
@@ -497,7 +529,7 @@ nav {
 }
 
 @keyframes title {
-  from{
+  from {
     width: 0%;
   }
   to {
@@ -522,31 +554,32 @@ nav {
 }
 
 @keyframes intro-animation-illu {
-  from{
+  from {
     right: -15%;
     opacity: 0;
   }
-  to{
+  to {
     right: 0%;
     opacity: 1;
   }
 }
 
-.main-left-illu, .main-right-illu{
+.main-left-illu,
+.main-right-illu {
   position: absolute;
   width: 50%;
   z-index: -1;
 }
 
-.main-right-illu{
+.main-right-illu {
   right: 0;
 }
 
-.main-left-illu{
+.main-left-illu {
   bottom: 0;
 }
 
-.intro-img{
+.intro-img {
   position: relative;
 }
 
@@ -908,13 +941,13 @@ nav {
   .about-title {
     left: 0%;
     position: static;
-    margin-right: .4em;
-    margin-left: .4em;
+    margin-right: 0.4em;
+    margin-left: 0.4em;
     transform: translateX(0%);
   }
- 
 
-  .default-title.inactive-tab::after, .default-title.inactive-tab::before {
+  .default-title.inactive-tab::after,
+  .default-title.inactive-tab::before {
     display: none;
   }
 

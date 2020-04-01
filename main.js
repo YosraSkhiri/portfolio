@@ -57,14 +57,36 @@ let colors = [
   'bg-color',
   'text-color',
   'primary-color',
-  'secondary-color'
+  'secondary-color',
+  'btn-primary-color',
+  'btn-secondary-color',
+  'btn-primary-bg-aftr-color',
+  'btn-primary-deact-color',
+  'btn-scondary-bg-aftr-color',
+  'separator-border-color',
+  'card-bg-color',
+  'ham-color',
+  'active-nav-link-mobile',
+  'btn-primary-deact-color',
+  'btn-scondary-deact-color'
 ];
 
 let lightColors = [
   '#fcfcfc',
   '#464646',
   '#ffff00',
-  '#72d9e0'
+  '#72d9e0',
+  '#72d9e0',
+  '#ffff00',
+  '#55a7ac',
+  '#579ca1',
+  '#acac06',
+  'rgba(0, 0, 0, 0.2)',
+  'rgba(255, 255, 255, 0.6)',
+  '#242424',
+  'rgb(74, 194, 202)',
+  '#579ca1',
+  '#b9b950'
 ]
 
 if (document.cookie === null || document.cookie === '') {
