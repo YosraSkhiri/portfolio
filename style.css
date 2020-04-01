@@ -210,13 +210,13 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-size: .75rem;
+  font-size: 0.75rem;
   z-index: 2;
-  margin: .3em;
-  opacity: .8;
+  margin: 0.3em;
+  opacity: 0.8;
 }
 
-.madeByme > a{
+.madeByme > a {
   color: var(--light-text-color);
 }
 

@@ -1,25 +1,9 @@
-let hamburger = document.querySelector('#hamburger');
 let menu = document.querySelector('.nav-links');
-let edu = document.querySelector('#edu');
-let job = document.querySelector('#job');
-let mode = document.querySelector('#mode');
-
-let eduContent = document.querySelector('#edu-content');
-let jobContent = document.querySelector('#job-content');
 let menuOut = false;
-let showedu = true;
 
-let computerIllu = document.querySelector('#computer');
-let rightIllu = document.querySelector('#right-illu');
-let leftIllu = document.querySelector('#left-illu');
-let rightIlluBg = document.querySelector('#right-illu-bg');
-let leftIlluBg = document.querySelector('#left-illu-bg');
-let github = document.querySelector('#github');
-let linkedin = document.querySelector('#linkedin');
-let mail = document.querySelector('#mail');
+document.querySelector('li.nav-link > a[href="' + window.location.href.substr(22) + '"] > span').classList.add('active');
 
-
-hamburger.addEventListener('click', function () {
+document.querySelector('#hamburger').addEventListener('click', function () {
   if (!menuOut) {
     menu.style.animation = 'menu-slide-in .3s ease-in forwards';
     menuOut = true;
@@ -29,6 +13,12 @@ hamburger.addEventListener('click', function () {
   }
   this.classList.toggle('active');
 });
+
+let edu = document.querySelector('#edu');
+let job = document.querySelector('#job');
+let eduContent = document.querySelector('#edu-content');
+let jobContent = document.querySelector('#job-content');
+let showedu = true;
 
 if (document.documentElement.clientWidth <= 768 && currentPage('about.html')) {
   jobContent.style.display = 'none'
@@ -52,6 +42,8 @@ if (document.documentElement.clientWidth <= 768 && currentPage('about.html')) {
     }
   })
 }
+
+let mode = document.querySelector('#mode');
 
 let colors = [
   'bg-color',
@@ -89,49 +81,30 @@ let lightColors = [
   '#b9b950'
 ]
 
+//Set the cookie
 if (document.cookie === null || document.cookie === '') {
   document.cookie = 'mode=light; path=/; max-age=‭172800‬';
 }
 
+//Get the current mode from the cookie
 let currentMode = document.cookie.split(';')[0].substr(5);
 
+//Adjust the theme according to the current mode
 if (currentMode === 'dark') {
-  for (let i = 0; i < colors.length; i++) {
-    document.documentElement.style.setProperty('--light-' + colors[i], getComputedStyle(document.documentElement)
-      .getPropertyValue('--dark-' + colors[i]));
-  }
-  mode.children[0].src = 'img/light_mode.svg';
-
-  if (currentPage('index.html')) {
-    computerIllu.src = 'img/main_illustration_dark.svg';
-  }
-  rightIllu.src = 'img/right_illu_dark.svg';
-  leftIllu.src = 'img/left_illu_dark.svg';
-
-  github.src = 'img/github_icon_dark.svg';
-  linkedin.src = 'img/linkedin_icon_dark.svg';
-  mail.src = 'img/mail_icon_dark.svg';
+  changeColors(currentMode, 'light');
+  changeIllustrations(currentMode);
 }
 
+//Change the theme
 mode.addEventListener('click', function () {
 
   if (currentMode === 'light') {
+
     document.cookie = 'mode=dark; path=/; max-age=‭172800';
     currentMode = document.cookie.split(';')[0].substr(5);
 
-    for (let i = 0; i < colors.length; i++) {
-      document.documentElement.style.setProperty('--light-' + colors[i], getComputedStyle(document.documentElement)
-        .getPropertyValue('--dark-' + colors[i]));
-    }
-    mode.children[0].src = 'img/light_mode.svg';
-    rightIllu.src = 'img/right_illu_dark.svg';
-    leftIllu.src = 'img/left_illu_dark.svg';
-    if (currentPage('index.html')) {
-      computerIllu.src = 'img/main_illustration_dark.svg';
-    }
-    github.src = 'img/github_icon_dark.svg';
-    linkedin.src = 'img/linkedin_icon_dark.svg';
-    mail.src = 'img/mail_icon_dark.svg';
+    changeColors(currentMode, 'light');
+    changeIllustrations(currentMode);
 
   } else {
     document.cookie = 'mode=light; path=/; max-age=‭172800';
@@ -140,22 +113,34 @@ mode.addEventListener('click', function () {
     for (let i = 0; i < colors.length; i++) {
       document.documentElement.style.setProperty('--light-' + colors[i], lightColors[i]);
     }
-    mode.children[0].src = 'img/Night_mode.svg';
-    rightIllu.src = 'img/right_illu.svg';
-    leftIllu.src = 'img/left_illu.svg';
-    if (currentPage('index.html')) {
-      computerIllu.src = 'img/main_illustration.svg';
-    }
-    github.src = 'img/github_icon.svg';
-    linkedin.src = 'img/linkedin_icon.svg';
-    mail.src = 'img/mail_icon.svg';
+    changeIllustrations(currentMode)
   }
 
 })
 
 function currentPage(page) {
+
   if (page === 'index.html' && window.location.href.substr(-4) !== 'html') return true;
   return window.location.href.substr(-(page.length)) === page;
 }
 
-document.querySelector('li.nav-link > a[href="'+ window.location.href.substr(22) +'"] > span').classList.add('active');
+function changeIllustrations(currentMode) {
+
+  if (currentPage('index.html')) {
+    document.querySelector('#computer').src = 'img/' + currentMode + '/main_illustration.svg';
+  }
+  mode.children[0].src = 'img/' + currentMode + '/mode.svg';
+  document.querySelector('#right-illu').src = 'img/' + currentMode + '/right_illu.svg';
+  document.querySelector('#left-illu').src = 'img/' + currentMode + '/left_illu.svg';
+  document.querySelector('#github').src = 'img/' + currentMode + '/github_icon.svg';
+  document.querySelector('#linkedin').src = 'img/' + currentMode + '/linkedin_icon.svg';
+  document.querySelector('#mail').src = 'img/' + currentMode + '/mail_icon.svg';
+}
+
+function changeColors(currentMode, lastMode) {
+
+  for (let i = 0; i < colors.length; i++) {
+    document.documentElement.style.setProperty('--' + lastMode + '-' + colors[i], getComputedStyle(document.documentElement)
+      .getPropertyValue('--' + currentMode + '-' + colors[i]));
+  }
+}
