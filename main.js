@@ -1,7 +1,7 @@
 let menu = document.querySelector('.nav-links');
 let menuOut = false;
 
-document.querySelector('li.nav-link > a[href="' + window.location.href.substr(22) + '"] > span').classList.add('active');
+document.querySelector('li.nav-link > a[href="' + window.location.href.substr(40) + '"] > span').classList.add('active');
 
 document.querySelector('#hamburger').addEventListener('click', function () {
   if (!menuOut) {
@@ -21,7 +21,7 @@ let jobContent = document.querySelector('#job-content');
 let showedu = true;
 
 if (document.documentElement.clientWidth <= 768 && currentPage('about.html')) {
-  jobContent.style.display = 'none'
+  jobContent.style.display = 'none';
   edu.addEventListener('click', function () {
     if (!showedu) {
       eduContent.style.display = 'block';
@@ -113,7 +113,7 @@ mode.addEventListener('click', function () {
     for (let i = 0; i < colors.length; i++) {
       document.documentElement.style.setProperty('--light-' + colors[i], lightColors[i]);
     }
-    changeIllustrations(currentMode)
+    changeIllustrations(currentMode);
   }
 
 })
