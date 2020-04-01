@@ -1,7 +1,8 @@
 let menu = document.querySelector('.nav-links');
 let menuOut = false;
+let linkPage = window.location.href.substr(40) === '' ? 'index.html': window.location.href.substr(40);
 
-document.querySelector('li.nav-link > a[href="' + window.location.href.substr(40) + '"] > span').classList.add('active');
+document.querySelector('li.nav-link > a[href="' + linkPage + '"] > span').classList.add('active');
 
 document.querySelector('#hamburger').addEventListener('click', function () {
   if (!menuOut) {
