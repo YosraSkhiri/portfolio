@@ -206,6 +206,20 @@ body {
   background: var(--light-primary-color);
 }
 
+.madeByme {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: .75rem;
+  z-index: 2;
+  margin: .3em;
+  opacity: .8;
+}
+
+.madeByme > a{
+  color: var(--light-text-color);
+}
+
 /* /Layout */
 
 /* Buttons */
