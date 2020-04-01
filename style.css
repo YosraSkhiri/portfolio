@@ -18,6 +18,11 @@
     ii- home page
     iii- about page
 
+    TODO:
+    - refactor css
+    - refactor js
+    - add hover states
+
 */
 
 /* 1-Fonts */
@@ -191,6 +196,14 @@ body {
   margin: 3em auto;
   position: relative;
   z-index: 3;
+}
+
+::selection {
+  background: var(--light-primary-color);
+}
+
+::-moz-selection {
+  background: var(--light-primary-color);
 }
 
 /* /Layout */
@@ -430,6 +443,10 @@ nav {
 }
 
 .nav-link > a:hover > span::after {
+  width: 130%;
+}
+
+.nav-link > a > span.active::before {
   width: 130%;
 }
 

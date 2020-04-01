@@ -157,3 +157,5 @@ function currentPage(page) {
   if (page === 'index.html' && window.location.href.substr(-4) !== 'html') return true;
   return window.location.href.substr(-(page.length)) === page;
 }
+
+document.querySelector('li.nav-link > a[href="'+ window.location.href.substr(22) +'"] > span').classList.add('active');
