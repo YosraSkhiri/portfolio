@@ -9,23 +9,18 @@
   2- Variables
   3- Reset styles
   4- Layout 
-  5- Background
-  5- Navigation 
-  6- Home page
-  7- about page
-  8- media queries
-    i- buttons
-    ii- home page
-    iii- about page
-
-    TODO:
-    - refactor css
-    - refactor js
-    - add hover states
+  5- Buttons
+  5- Illustrations 
+  6- Navigation
+  7- Home page
+  8- About page
+  9- Skills page
+  10- Projects page
+  11- Media queries
 
 */
 
-/* 1-Fonts */
+/* 1- Fonts */
 
 @font-face {
   font-family: "roboto condensed";
@@ -101,7 +96,7 @@
 }
 /* /Fonts */
 
-/* 2-Variables */
+/* 2- Variables */
 
 :root {
   --light-bg-color: #fcfcfc;
@@ -151,7 +146,7 @@
 
 /* /Variables */
 
-/* 3-Reset styles */
+/* 3- Reset styles */
 
 * {
   margin: 0;
@@ -177,7 +172,7 @@ button {
 
 /* /Reset styles */
 
-/* 4-Layout */
+/* 4- Layout */
 
 html,
 body {
@@ -222,7 +217,7 @@ body {
 
 /* /Layout */
 
-/* Buttons */
+/* 5- Buttons */
 
 .btn {
   font-weight: bold;
@@ -333,7 +328,7 @@ body {
 
 /* /Buttons */
 
-/**/
+/* 6- Illustrations*/
 
 .computer-bg {
   width: 500px;
@@ -362,9 +357,10 @@ body {
   top: 95%;
   left: 95%;
 }
-/**/
 
-/* 5-Navigation */
+/* /Illustrations */
+
+/* 6- Navigation */
 
 nav {
   display: flex;
@@ -500,7 +496,7 @@ nav {
 
 /* /Navigation */
 
-/* 6-Home page */
+/* 7- Home page */
 
 .intro-container {
   display: flex;
@@ -624,7 +620,7 @@ nav {
 
 /* /Home page */
 
-/* About page */
+/* 8- About page */
 
 .about-container {
   display: flex;
@@ -683,7 +679,7 @@ nav {
 
 /* /About page */
 
-/* Skills page */
+/* 9- Skills page */
 
 .skill-title {
   font-family: "Permanent Marker";
@@ -726,7 +722,7 @@ nav {
 
 /* /Skills page */
 
-/* Projects page */
+/* 10- Projects page */
 
 .projects {
   display: grid;
@@ -786,7 +782,9 @@ nav {
   display: flex;
 }
 
-/* Projects page */
+/* /Projects page */
+
+/* 11- Media queries */
 
 @media only screen and (max-width: 768px) {
   #hamburger {
