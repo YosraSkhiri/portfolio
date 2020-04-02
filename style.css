@@ -480,6 +480,10 @@ nav {
   justify-content: space-around;
 }
 
+.social-icons > ul > li {
+  width: 30px;
+}
+
 #hamburger {
   display: none;
   z-index: 6;
@@ -492,6 +496,7 @@ nav {
   z-index: 1;
   cursor: pointer;
   margin: 2em;
+  width: 40px;
 }
 
 /* /Navigation */
