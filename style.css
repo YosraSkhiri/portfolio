@@ -753,10 +753,8 @@ nav {
   display: flex;
   background-color: var(--light-secondary-color);
   border-radius: 25px 0 0 25px;
-}
-
-.card-img {
-  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-content {
